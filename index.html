@@ -7,7 +7,47 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <div class="view-switch">
+            <span>Agenda</span>
+            <label class="toggle">
+                <input type="checkbox" id="view-toggle">
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+            <span>Calendar</span>
+        </div>
 
+        <div class="days">
+            <div class="day" <h2>Sunday</h2><button>Add Event</button></div>
+            <div class="day" <h2>Monday</h2><button>Add Event</button></div>
+            <div class="day" <h2>Tuesday</h2><button>Add Event</button></div>
+            <div class="day" <h2>Wednesday</h2><button>Add Event</button></div>
+            <div class="day" <h2>Thursday</h2><button>Add Event</button></div>
+            <div class="day" <h2>Friday</h2><button>Add Event</button></div>
+            <div class="day" <h2>Saturday</h2><button>Add Event</button></div>
+            <div class="day next-week"><h2>Next Week...</h2><button>Add Event</button></div>
+        </div>
+
+        <div class="month-view">
+            <h2 class="month-title"></h2>
+            <div class="month-grid"></div>
+        </div>
+
+        <dialog id="event-dialog">
+            <form method="dialog">
+                <label>Title
+                    <input type="text" id="event-title" required>
+                </label>
+                <label>Date
+                    <input type="date" id="event-date" required>
+                </label>
+                <menu>
+                    <button value="cancel" formnovalidate>Cancel</button>
+                    <button value="add">Add</button>
+                </menu>
+            </form>
+        </dialog>
+
+        <script src="nav.js"></script>
         <script src="index.js"></script>
     </body>
 </html>

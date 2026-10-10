@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/TinaNLe/agenda/issues"
   },
-  "homepage": "https://github.com/TinaNLe/agenda#readme",
+  "homepage": "https://github.com/TinaNLe/agenda",
   "devDependencies": {
     "live-server": "^1.2.2"
   }
