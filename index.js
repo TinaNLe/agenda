@@ -118,4 +118,22 @@ eventForm.addEventListener("submit", function (e) {
         : (weekdayButtons[enteredDate.getDay()] || activeButton);
 
     targetButton.insertAdjacentElement("beforebegin", item);
+
+    // --- Add asterisk to calendar cell ---
+const eventDate = parseLocalDate(dateInput.value);
+const eventDay = eventDate.getDate();
+
+// Find the matching calendar cell
+const calendarCells = document.querySelectorAll(".month-cell:not(.empty)");
+const targetCell = Array.from(calendarCells).find(c => Number(c.textContent) === eventDay);
+
+if (targetCell) {
+    // Avoid duplicate asterisks
+    if (!targetCell.querySelector(".event-indicator")) {
+        const indicator = document.createElement("span");
+        indicator.className = "event-indicator";
+        indicator.textContent = "*";
+        targetCell.appendChild(indicator);
+    }
+}
 });
